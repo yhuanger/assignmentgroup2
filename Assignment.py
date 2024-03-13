@@ -8,6 +8,7 @@ import cartopy.crs as ccrs
 file_path = "ERA5_2mTemp_19900101-19900531_00h.nc"
 ds = xr.open_dataset(file_path)
 
+#select the required day
 temp_jan1 = ds['t2m'].sel(time='1990-01-01')
 
 #plot the temperature on 01/01/1990
@@ -34,7 +35,7 @@ plt.show()
 
 # 3(c)
 # Calculate the mean temperature for each month (January-May) and plot the data on (five) global maps
-# resample the dataset to monthly frequency and calculate average temp
+# resample the dataset to monthly frequency 
 monthly_mean_temp = ds['t2m'].resample(time='M').mean()
 
 # dataset only has the temp of 5 months
@@ -42,6 +43,7 @@ monthly_mean_temp = ds['t2m'].resample(time='M').mean()
 months = ['January', 'February', 'March', 'April', 'May']
 
 # loop for the graphs
+# index and the name of the month. 
 for i, month in enumerate(months):
     #the size of the plot
     plt.figure(figsize=(10, 5))
@@ -51,4 +53,4 @@ for i, month in enumerate(months):
     monthly_mean_temp.sel(time=monthly_mean_temp['time.month'] == i + 1).mean(dim='time').plot()
     plt.title(f'Mean temperature for {month}')
     plt.show()
-# How to edit? 
+
