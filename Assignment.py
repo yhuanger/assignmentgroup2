@@ -51,3 +51,4 @@ for i, month in enumerate(months):
     monthly_mean_temp.sel(time=monthly_mean_temp['time.month'] == i + 1).mean(dim='time').plot()
     plt.title(f'Mean temperature for {month}')
     plt.show()
+# How to edit? 
