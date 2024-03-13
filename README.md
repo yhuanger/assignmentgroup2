@@ -7,9 +7,11 @@ Project Structure
 The project is divided into three main steps:
 
 (a) Open File and Plot Fraction of Data
-In this step, users will learn how to open a file, select a specific portion of the data, and plot it using xarray. 
+In this step, users will learn how to open a file, select a specific portion of the data, and plot it using xarray.
+
 (b) Calculate Daily Mean Global Temperature and Plot Time Series
 Users will calculate the daily mean global temperature from the provided dataset and plot the resulting time series. 
+
 (c) Calculate Monthly Mean Temperature and Plot Global Maps
 This step involves calculating the mean temperature for each month (January to May) and plotting the data on global maps.
 
