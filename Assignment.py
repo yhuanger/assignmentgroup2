@@ -35,7 +35,7 @@ plt.show()
 
 # 3(c)
 # Calculate the mean temperature for each month (January-May) and plot the data on (five) global maps
-# resample the dataset to monthly frequency 
+# resample the dataset to monthly frequency (time = 5) 
 monthly_mean_temp = ds['t2m'].resample(time='M').mean()
 
 # dataset only has the temp of 5 months
